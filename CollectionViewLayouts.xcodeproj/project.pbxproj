@@ -13,6 +13,9 @@
 		762F2FA424826C7100A1013C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762F2FA224826C7100A1013C /* Main.storyboard */; };
 		762F2FA624826C7200A1013C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762F2FA524826C7200A1013C /* Assets.xcassets */; };
 		762F2FA924826C7200A1013C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762F2FA724826C7200A1013C /* LaunchScreen.storyboard */; };
+		762F2FB324826CC900A1013C /* ShearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F2FB124826CC900A1013C /* ShearCell.swift */; };
+		762F2FB424826CC900A1013C /* ShearCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762F2FB224826CC900A1013C /* ShearCell.xib */; };
+		762F2FB624826FC100A1013C /* ShearLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F2FB524826FC100A1013C /* ShearLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		762F2FA524826C7200A1013C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		762F2FA824826C7200A1013C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		762F2FAA24826C7200A1013C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		762F2FB124826CC900A1013C /* ShearCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShearCell.swift; sourceTree = "<group>"; };
+		762F2FB224826CC900A1013C /* ShearCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShearCell.xib; sourceTree = "<group>"; };
+		762F2FB524826FC100A1013C /* ShearLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShearLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,24 @@
 			children = (
 				762F2F9C24826C7100A1013C /* AppDelegate.swift */,
 				762F2F9E24826C7100A1013C /* SceneDelegate.swift */,
-				762F2FA024826C7100A1013C /* ViewController.swift */,
 				762F2FA224826C7100A1013C /* Main.storyboard */,
+				762F2FA024826C7100A1013C /* ViewController.swift */,
+				762F2FB524826FC100A1013C /* ShearLayout.swift */,
+				762F2FB024826CA600A1013C /* ShearCell */,
 				762F2FA524826C7200A1013C /* Assets.xcassets */,
 				762F2FA724826C7200A1013C /* LaunchScreen.storyboard */,
 				762F2FAA24826C7200A1013C /* Info.plist */,
 			);
 			path = CollectionViewLayouts;
+			sourceTree = "<group>";
+		};
+		762F2FB024826CA600A1013C /* ShearCell */ = {
+			isa = PBXGroup;
+			children = (
+				762F2FB124826CC900A1013C /* ShearCell.swift */,
+				762F2FB224826CC900A1013C /* ShearCell.xib */,
+			);
+			path = ShearCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				762F2FA924826C7200A1013C /* LaunchScreen.storyboard in Resources */,
+				762F2FB424826CC900A1013C /* ShearCell.xib in Resources */,
 				762F2FA624826C7200A1013C /* Assets.xcassets in Resources */,
 				762F2FA424826C7100A1013C /* Main.storyboard in Resources */,
 			);
@@ -139,8 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				762F2FA124826C7100A1013C /* ViewController.swift in Sources */,
+				762F2FB324826CC900A1013C /* ShearCell.swift in Sources */,
 				762F2F9D24826C7100A1013C /* AppDelegate.swift in Sources */,
 				762F2F9F24826C7100A1013C /* SceneDelegate.swift in Sources */,
+				762F2FB624826FC100A1013C /* ShearLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +313,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Fathi.CollectionViewLayouts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +330,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Fathi.CollectionViewLayouts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
