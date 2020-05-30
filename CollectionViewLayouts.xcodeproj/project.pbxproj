@@ -10,12 +10,13 @@
 		762F2F9D24826C7100A1013C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F2F9C24826C7100A1013C /* AppDelegate.swift */; };
 		762F2F9F24826C7100A1013C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F2F9E24826C7100A1013C /* SceneDelegate.swift */; };
 		762F2FA124826C7100A1013C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F2FA024826C7100A1013C /* ViewController.swift */; };
-		762F2FA424826C7100A1013C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762F2FA224826C7100A1013C /* Main.storyboard */; };
 		762F2FA624826C7200A1013C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762F2FA524826C7200A1013C /* Assets.xcassets */; };
 		762F2FA924826C7200A1013C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762F2FA724826C7200A1013C /* LaunchScreen.storyboard */; };
 		762F2FB324826CC900A1013C /* ShearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F2FB124826CC900A1013C /* ShearCell.swift */; };
 		762F2FB424826CC900A1013C /* ShearCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762F2FB224826CC900A1013C /* ShearCell.xib */; };
 		762F2FB624826FC100A1013C /* ShearLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F2FB524826FC100A1013C /* ShearLayout.swift */; };
+		762F2FBA248299F300A1013C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762F2FB9248299F300A1013C /* Main.storyboard */; };
+		762F2FBF24829A6500A1013C /* ParallaxLayoutAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F2FBE24829A6500A1013C /* ParallaxLayoutAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,13 +24,14 @@
 		762F2F9C24826C7100A1013C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		762F2F9E24826C7100A1013C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		762F2FA024826C7100A1013C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		762F2FA324826C7100A1013C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		762F2FA524826C7200A1013C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		762F2FA824826C7200A1013C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		762F2FAA24826C7200A1013C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		762F2FB124826CC900A1013C /* ShearCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShearCell.swift; sourceTree = "<group>"; };
 		762F2FB224826CC900A1013C /* ShearCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShearCell.xib; sourceTree = "<group>"; };
 		762F2FB524826FC100A1013C /* ShearLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShearLayout.swift; sourceTree = "<group>"; };
+		762F2FB9248299F300A1013C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		762F2FBE24829A6500A1013C /* ParallaxLayoutAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxLayoutAttributes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,26 +64,59 @@
 		762F2F9B24826C7100A1013C /* CollectionViewLayouts */ = {
 			isa = PBXGroup;
 			children = (
-				762F2F9C24826C7100A1013C /* AppDelegate.swift */,
-				762F2F9E24826C7100A1013C /* SceneDelegate.swift */,
-				762F2FA224826C7100A1013C /* Main.storyboard */,
-				762F2FA024826C7100A1013C /* ViewController.swift */,
-				762F2FB524826FC100A1013C /* ShearLayout.swift */,
-				762F2FB024826CA600A1013C /* ShearCell */,
-				762F2FA524826C7200A1013C /* Assets.xcassets */,
-				762F2FA724826C7200A1013C /* LaunchScreen.storyboard */,
-				762F2FAA24826C7200A1013C /* Info.plist */,
+				762F2FB8248299D200A1013C /* App */,
+				762F2FB7248299C600A1013C /* Modules */,
+				762F2FBD24829A5100A1013C /* Layout */,
+				762F2FBB248299F800A1013C /* Cells */,
+				762F2FBC24829A0E00A1013C /* SupportingFiles */,
 			);
 			path = CollectionViewLayouts;
 			sourceTree = "<group>";
 		};
-		762F2FB024826CA600A1013C /* ShearCell */ = {
+		762F2FB7248299C600A1013C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				762F2FB9248299F300A1013C /* Main.storyboard */,
+				762F2FA024826C7100A1013C /* ViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		762F2FB8248299D200A1013C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				762F2F9C24826C7100A1013C /* AppDelegate.swift */,
+				762F2F9E24826C7100A1013C /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		762F2FBB248299F800A1013C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				762F2FB124826CC900A1013C /* ShearCell.swift */,
 				762F2FB224826CC900A1013C /* ShearCell.xib */,
 			);
-			path = ShearCell;
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		762F2FBC24829A0E00A1013C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				762F2FA524826C7200A1013C /* Assets.xcassets */,
+				762F2FA724826C7200A1013C /* LaunchScreen.storyboard */,
+				762F2FAA24826C7200A1013C /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		762F2FBD24829A5100A1013C /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				762F2FB524826FC100A1013C /* ShearLayout.swift */,
+				762F2FBE24829A6500A1013C /* ParallaxLayoutAttributes.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,7 +180,7 @@
 				762F2FA924826C7200A1013C /* LaunchScreen.storyboard in Resources */,
 				762F2FB424826CC900A1013C /* ShearCell.xib in Resources */,
 				762F2FA624826C7200A1013C /* Assets.xcassets in Resources */,
-				762F2FA424826C7100A1013C /* Main.storyboard in Resources */,
+				762F2FBA248299F300A1013C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				762F2FA124826C7100A1013C /* ViewController.swift in Sources */,
+				762F2FBF24829A6500A1013C /* ParallaxLayoutAttributes.swift in Sources */,
 				762F2FB324826CC900A1013C /* ShearCell.swift in Sources */,
 				762F2F9D24826C7100A1013C /* AppDelegate.swift in Sources */,
 				762F2F9F24826C7100A1013C /* SceneDelegate.swift in Sources */,
@@ -167,14 +203,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		762F2FA224826C7100A1013C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				762F2FA324826C7100A1013C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		762F2FA724826C7200A1013C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -305,7 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CollectionViewLayouts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CollectionViewLayouts/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,7 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = CollectionViewLayouts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CollectionViewLayouts/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

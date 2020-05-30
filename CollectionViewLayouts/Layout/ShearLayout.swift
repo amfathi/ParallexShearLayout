@@ -31,7 +31,7 @@ class ShearLayout: UICollectionViewLayout {
     }
     
     // Cache
-    private var layoutAttributes: [ParallaxCollectionViewLayoutAttributes] = []
+    private var layoutAttributes: [ParallaxLayoutAttributes] = []
     
     
     // MARK: - ContentSize
@@ -59,7 +59,7 @@ class ShearLayout: UICollectionViewLayout {
         
         for item in 0..<itemCount {
             let indexPath = IndexPath(item: item, section: 0)
-            let attributes = ParallaxCollectionViewLayoutAttributes(forCellWith: indexPath)
+            let attributes = ParallaxLayoutAttributes(forCellWith: indexPath)
             
             attributes.size = itemSize
             
@@ -129,25 +129,4 @@ class ShearLayout: UICollectionViewLayout {
 
 
 
-class ParallaxCollectionViewLayoutAttributes: UICollectionViewLayoutAttributes {
-    var parallax: CGFloat = 0
-    
-    // MARK: NSCopying
-    
-    override func copy(with zone: NSZone? = nil) -> Any {
-        let copy = super.copy(with: zone) as! ParallaxCollectionViewLayoutAttributes
-        copy.parallax = self.parallax
-        return copy
-    }
-    
-    override func isEqual(_ object: Any?) -> Bool {
-        if let rhs = object as? ParallaxCollectionViewLayoutAttributes {
-           if parallax != rhs.parallax {
-              return false
-           }
-           return super.isEqual(object)
-        } else {
-           return false
-        }
-    }
-}
+

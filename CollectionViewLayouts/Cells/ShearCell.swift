@@ -19,7 +19,7 @@ class ShearCell: UICollectionViewCell {
     }
     
     override func apply(_ layoutAttributes: UICollectionViewLayoutAttributes) {
-        if let attributes = layoutAttributes as? ParallaxCollectionViewLayoutAttributes {
+        if let attributes = layoutAttributes as? ParallaxLayoutAttributes {
             let transform = CGAffineTransform.identity.translatedBy(x: 0, y: attributes.parallax)
             imageView.transform = transform
         }
